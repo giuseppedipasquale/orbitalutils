@@ -40,9 +40,9 @@ def rv2classical(r,v):
 
     # right ascension of ascending node RAAN
     if J.dot(i_n) >= 0:
-        RAAN = np.arccos(norm((I.dot(i_n))))
+        RAAN = norm(np.arccos(I.dot(i_n)))
     else:
-        RAAN = 2*np.pi-np.arccos(norm((I.dot(i_n))))
+        RAAN = 2*np.pi-norm(np.arccos(I.dot(i_n)))
     if np.isnan(RAAN) or INC == 0:
         RAAN = 0
         
@@ -54,9 +54,9 @@ def rv2classical(r,v):
 
     # argument of perigee AOP
     if K.dot(i_e) >= 0:
-        AOP = np.arccos(norm(i_n.transpose().dot(i_e)))
+        AOP = norm(np.arccos(i_n.transpose().dot(i_e)))
     else:
-        AOP = 2*np.pi-np.arccos(norm(i_n.transpose().dot(i_e)))
+        AOP = 2*np.pi-norm(np.arccos(i_n.transpose().dot(i_e)))
     if np.isnan(AOP):
         AOP = 0
 
