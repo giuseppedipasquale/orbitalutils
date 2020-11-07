@@ -1,3 +1,5 @@
+import numpy as np
+
 def pqw2IJK(r_pqw, RAAN, INC, AOP):
     """ Transforms a vector in the pqw frame (r_pqw),
         into a vector in the IJK frame (r_IJK)
