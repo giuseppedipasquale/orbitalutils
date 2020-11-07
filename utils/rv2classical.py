@@ -2,7 +2,11 @@ import numpy as np
 from numpy.linalg import norm
 
 def rv2classical(r,v):
-
+    """
+        Calculates classical orbital elements starting
+        from position vector r and velocity vector v.
+    """
+    
     # I,J,K fundamental versors
     I = np.array([1, 0, 0])
     J = np.array([0, 1, 0])
