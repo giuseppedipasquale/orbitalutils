@@ -12,8 +12,8 @@ def JD2dmy(JD):
     g = floor(floor((JD-4479.5)/36524.25)*0.75+0.5)-37
     N = JD+g
     yyyy = floor(N/365.25)-4712
-    d = floor((N-59.25%365.25))
-    mm = mod(floor((d+0.5)/30.6)+2,12)+1
-    dd = floor((d+0.5%30.6))+1
+    d = floor((N-59.25)%365.25)
+    mm = (floor((d+0.5)/30.6)+2)%12+1
+    dd = floor((d+0.5)%30.6)+1
     
     return [dd,mm,yyyy]
