@@ -15,7 +15,7 @@ def SEZ2IJK(r_SEZ, ALPHA, DELTA):
                           [0,  np.cos(DELTA),  -np.sin(DELTA)],
                           [0,  np.sin(DELTA),   np.cos(DELTA)]])
     
-    R = R3_ALTA.dot(R1_DELTA)
+    R = R3_ALPHA.dot(R1_DELTA)
 
     r_IJK = R.dot(r_SEZ)
     
