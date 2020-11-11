@@ -1,0 +1,12 @@
+import numpy as np
+
+def SEZ2IJK(r_SEZ, ALPHA, DELTA):
+  """
+      Given a vector in the South-East-Z coordinate
+      reference system and angles of rotation ascencion
+      ALPHA and declination DELTA, returns the vector in
+      IJK fixed reference system.
+  """
+  R = np.array([[np.sin(DELTA)],
+                [],
+                []])
